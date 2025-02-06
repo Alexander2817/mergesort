@@ -96,6 +96,7 @@ void coutVector(const vector<int>& arr) {
     cout << "]" << endl;
 }
 
+
 /**
  * Main function that generates a random vector of integers, sorts it using merge sort, 
  * and prints the time taken for sorting ten elements of the sorted vector.
@@ -103,20 +104,23 @@ void coutVector(const vector<int>& arr) {
  * It also prints the unsorted and sorted vectors.
  */
 int main() {
-    auto start_time = chrono::high_resolution_clock::now();  
-    vector<int> arr = random(10); 
+    int size;
+    cout << "Enter the size of the vector: " << endl;
+    cin >> size;
+
+    vector<int> arr = random(size);
 
     cout << "Unsorted Elements: ";
-    coutVector(arr); 
+    coutVector(arr);
+
+    clock_t start_time = clock();
     mergeSort(arr, 0, arr.size() - 1);
+    clock_t end_time = clock();
 
-    auto end_time = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end_time - start_time);
-
-    cout << "Time taken: " << duration.count() << " milliseconds" << endl;
+    double duration = (end_time - start_time) / (double)CLOCKS_PER_SEC * 1000.0;
+    cout << "Time taken: " << duration << " milliseconds" << endl;
     cout << "Sorted Elements: ";
-    coutVector(arr); 
-
+    coutVector(arr);
 
     return 0;
 }
