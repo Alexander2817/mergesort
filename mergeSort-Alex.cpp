@@ -65,62 +65,33 @@ void mergeSort(vector<int>& arr, int left, int right) {
     }
 }
 
-/**
- * Generates a vector of the given size with random elements between 0 and 1,000,000,000.
- * @param size the size of the vector to be generated
- * @return a vector of the given size with random elements
- */
-vector<int> random(int size) {
-    vector<int> arr(size);
-    srand(time(0));
-    for (int i = 0; i < size; i++) {
-        arr[i] = rand() % 1000000000; 
-    }
-    return arr;
-}
 
 /**
- * Prints the first ten elements or fewer of the given vector, separated by commas.
- * If the vector has fewer than ten elements, only those elements are printed.
- * @param arr the vector of integers to be printed
- */
-void coutVector(const vector<int>& arr) {
-    int lim = min(10, (int)arr.size());
-    cout << "[";
-    for (int i = 0; i < lim; i++) {
-        cout << arr[i];
-        if (i < lim - 1) {
-            cout << ", ";
-        }
-    }
-    cout << "]" << endl;
-}
-
-
-/**
- * Main function that generates a random vector of integers, sorts it using merge sort, 
- * and prints the time taken for sorting ten elements of the sorted vector.
- * It measures the time taken to execute the merge sort and outputs the duration in milliseconds.
- * It also prints the unsorted and sorted vectors.
+ * The main function is the entry point of the program.
+ * It asks the user for the size of the vector and fills it with random numbers.
+ * It then calls the mergeSort function and measures the time it takes to sort the vector.
+ * Finally, it prints out the duration of the sorting process.
  */
 int main() {
     int size;
-    cout << "Enter the size of the vector: " << endl;
+    vector<int> arr;
+    
+    cout << "Enter the size of the vector: ";
     cin >> size;
+    cout << "Input Value: " << size <<endl;
 
-    vector<int> arr = random(size);
+    srand(time(0));
+    for (int i = 0; i < size; i++) {
+        int value = rand() % 1000;
+        arr.push_back(value);
+    }
 
-    cout << "Unsorted Elements: ";
-    coutVector(arr);
-
-    clock_t start_time = clock();
+    clock_t start = clock();
     mergeSort(arr, 0, arr.size() - 1);
-    clock_t end_time = clock();
+    clock_t end = clock();
 
-    double duration = (end_time - start_time) / (double)CLOCKS_PER_SEC * 1000.0;
-    cout << "Time taken: " << duration << " milliseconds" << endl;
-    cout << "Sorted Elements: ";
-    coutVector(arr);
+    double duration = double(end - start) / CLOCKS_PER_SEC * 1000;
+    cout << "Duration: " << duration << " s" << endl;
 
     return 0;
 }
