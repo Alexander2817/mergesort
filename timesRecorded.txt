@@ -70,3 +70,53 @@ Running merge sort for size: 1000000000
 Unsorted Elements: [168452933, 138600226, 895623287, 142697660, 970405698, 704701708, 709700704, 251519601, 73969865, 484727317]
 Time taken: 0 milliseconds
 Sorted Elements: [73969865, 138600226, 142697660, 168452933, 251519601, 484727317, 704701708, 709700704, 895623287, 970405698]
+Running merge sort for size: 10
+Enter the size of the vector: Input Value: 10
+Duration: 0.007 s
+Running merge sort for size: 100
+Enter the size of the vector: Input Value: 100
+Duration: 0.046 s
+Running merge sort for size: 1000
+Enter the size of the vector: Input Value: 1000
+Duration: 0.496 s
+Running merge sort for size: 10000
+Enter the size of the vector: Input Value: 10000
+Duration: 5.52 s
+Running merge sort for size: 100000
+Enter the size of the vector: Input Value: 100000
+Duration: 60.068 s
+Running merge sort for size: 1000000
+Enter the size of the vector: Input Value: 1000000
+Duration: 643.96 s
+Running merge sort for size: 10000000
+Enter the size of the vector: Input Value: 10000000
+Duration: 6930.25 s
+Running merge sort for size: 100000000
+Enter the size of the vector: Input Value: 100000000
+Running merge sort for size: 10
+Enter the size of the vector: Input Value: 10
+Duration: 0.006 s
+Running merge sort for size: 100
+Enter the size of the vector: Input Value: 100
+Duration: 0.046 s
+Running merge sort for size: 1000
+Enter the size of the vector: Input Value: 1000
+Duration: 0.498 s
+Running merge sort for size: 10000
+Enter the size of the vector: Input Value: 10000
+Duration: 5.512 s
+Running merge sort for size: 100000
+Enter the size of the vector: Input Value: 100000
+Duration: 60.121 s
+Running merge sort for size: 1000000
+Enter the size of the vector: Input Value: 1000000
+Duration: 645.094 s
+Running merge sort for size: 10000000
+Enter the size of the vector: Input Value: 10000000
+Duration: 6942.46 s
+Running merge sort for size: 100000000
+Enter the size of the vector: Input Value: 100000000
+Duration: 74315.8 s
+Running merge sort for size: 1000000000
+Enter the size of the vector: Input Value: 1000000000
+Duration: 795628 s
